@@ -17,8 +17,13 @@
 	}
 	function submit_form() {
 		if(document.input_form.sale_code.value === ''){
-			alert("판매 코드를 입력해야 합니다");
+			alert("매출전표번호을 입력해야 합니다");
 			document.input_form.sale_code.focus();
+			return;
+		}
+		if(document.input_form.scode.value === ''){
+			alert("지점코드를 입력해야 합니다");
+			document.input_form.scode.focus();
 			return;
 		}
 			if(document.input_form.sale_date.value === ''){
@@ -31,7 +36,7 @@
 			document.input_form.sale_amount.focus();
 			return;
 			}
-		alert("정상적으로 처리되었습니다.");
+		alert("정상적으로 처리되었습니다!");
 		document.input_form.submit();
 	}
 </script>
